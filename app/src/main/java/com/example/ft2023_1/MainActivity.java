@@ -10,7 +10,6 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     TextView textView;
-    Button btnChangeMainText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,13 +17,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         this.textView = findViewById(R.id.textView);
-        this.btnChangeMainText = (Button) findViewById(R.id.btnChangeMainText);
+    }
 
-        btnChangeMainText.setOnClickListener(new View.OnClickListener() {
-           public void onClick(View v) {
-                   textView.setText("Sveiki kolegos");
-            }
-        });
+           public void btnChangeMainTextClick(View view) {
+                   this.textView.setText("Sveiki kolegos");
 
     }
 }
